@@ -132,7 +132,7 @@ try:
         If both uncertainties are unequal zero, the calculation can not be
         performed analytically and the package scipy.odr is used.
         """
-        m,sigma_m,c,sigma_c,corr,chisq = linear_regression_2(x,y,uncert_x, uncert_y)
+        m,sigma_m,c,sigma_c,corr,chisq = linear_regression(x,y,uncert_x, uncert_y)
         cov = sigma_m * sigma_c * corr
         cov_mat = [[sigma_m**2, cov],[cov, sigma_c**2]]
 
